@@ -1,13 +1,43 @@
-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <div class="full-container">
 
-<html lang="pl">
-  <head>
-    <meta charset="utf-8" />
-    <title>The HTML5 Herald</title>
-  </head>
+        <div class="text-container-1">
+            <p>Tic Tac Toe</p>
+        </div>
 
-  <body>
-    <h1></h1>
-    <script
-  </body>
+        <div class="TicTacToe">
+            <div class="column">
+                <div class="square" id=1 onclick="pressed(id)"></div>
+                <div class="square" id=4 onclick="pressed(id)"></div>
+                <div class="square" id=7 onclick="pressed(id)"></div>
+            </div>
+            <div class="column">
+                <div class="square" id=2 onclick="pressed(id)"></div>
+                <div class="square" id=5 onclick="pressed(id)"></div>
+                <div class="square" id=8 onclick="pressed(id)"></div>
+            </div>
+            <div class="column">
+                <div class="square" id=3 onclick="pressed(id)"></div>
+                <div class="square" id=6 onclick="pressed(id)"></div>
+                <div class="square" id=9 onclick="pressed(id)"></div>
+            </div>
+    
+        </div>
+
+        <div class="winner-box" id="winner">Move: O</div>
+        
+       <div class="restart-button" id="restart" onclick="restart()">Restart</div>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
 </html>
+
+
