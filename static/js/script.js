@@ -47,6 +47,11 @@ function pressed(id)
             running = false;
             document.getElementById("winner").innerHTML = "Winner: " + players[actual_player];
         }
+        else if (tie())
+        {
+            running = false;
+            document.getElementById("winner").innerHTML = "Tie";
+        }
         else
         {
             document.getElementById("winner").innerHTML = "Move: " + players[actual_player];
@@ -73,4 +78,16 @@ function restart()
     }
     document.getElementById("winner").innerHTML = "Move: O";
 
+}
+
+function tie()
+{
+    for (let i=0; i<9; i++)
+    {
+        if (tab[i] != -1)
+        {
+            return false;
+        }
+    }
+    return true;
 }
