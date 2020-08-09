@@ -1,1 +1,1 @@
-# JavaScript-learning
+# JS Learning
