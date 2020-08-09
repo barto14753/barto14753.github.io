@@ -6,7 +6,6 @@ let running = true;
 
 function have_winner()
 {
-    console.log("checking");
 
     for(let i=0; i<3; i++)
     {
@@ -31,6 +30,19 @@ function have_winner()
     return false
 
 
+}
+
+function tie()
+{
+    for (let i=0; i<9; i++)
+    {
+        if (tab[i] == -1)
+        {
+            console.log("HERE: " + tab[i] + " " + i);
+            return false;
+        }
+    }
+    return true;
 }
 
 function pressed(id)
@@ -58,6 +70,7 @@ function pressed(id)
         }
 
         actual_player = (actual_player + 1) % 2;
+        console.log(tab);
 
     }
 }
@@ -80,14 +93,3 @@ function restart()
 
 }
 
-function tie()
-{
-    for (let i=0; i<9; i++)
-    {
-        if (tab[i] != -1)
-        {
-            return false;
-        }
-    }
-    return true;
-}
