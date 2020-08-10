@@ -4,6 +4,7 @@ let actual_player = 0;
 let running = true;
 
 
+
 function have_winner()
 {
 
@@ -27,7 +28,7 @@ function have_winner()
         return true;
     }
 
-    return false
+    return false;
 
 
 }
@@ -90,6 +91,7 @@ function restart()
         delete_square(i+1);
     }
     document.getElementById("winner").innerHTML = "Move: O";
+    reset_color();
 
 }
 
