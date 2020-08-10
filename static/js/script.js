@@ -97,5 +97,5 @@ function restart()
 
 function to_rps()
 {
-    window.location.href = "https://cssgradient.io";
+    window.location.href = "http://barto14753.github.io/rps";
 }

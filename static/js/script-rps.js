@@ -61,5 +61,5 @@ function game(humanChoice)
 
 function to_tictactoe()
 {
-    window.location.href = "https://http://barto14753.github.io";
+    window.location.href = "http://barto14753.github.io";
 }
