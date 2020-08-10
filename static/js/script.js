@@ -10,9 +10,10 @@ function bot_move()
     while (tab[chosen] != -1)
     {
         chosen++;
+        chosen = chosen % 9;
     }
     element = document.createTextNode("X");
-    document.getElementById(id).appendChild(element);
+    document.getElementById(chosen+1).appendChild(element);
     tab[chosen] = 1;
 
 }
@@ -84,7 +85,8 @@ function pressed(id)
             document.getElementById("winner").innerHTML = "Move: Bot";
         }
 
-        setTimeout(() => {  bot_move(); }, 2000);
+        bot_move();
+        setTimeout(() => {  bot_move; }, 2000);
 
         if(have_winner())
         {
