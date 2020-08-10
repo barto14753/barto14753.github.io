@@ -97,5 +97,5 @@ function restart()
 
 function to_rps()
 {
-    window.location.href = "http://barto14753.github.io/rps";
+    window.location.href = "https://barto14753.github.io/rps";
 }
