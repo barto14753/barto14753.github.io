@@ -4,6 +4,18 @@ let actual_player = 0;
 let running = true;
 
 
+function bot_move()
+{
+    let chosen = Math.floor(Math.random()*9);
+    while (tab[chosen] != -1)
+    {
+        chosen++;
+    }
+    element = document.createTextNode("X");
+    document.getElementById(id).appendChild(element);
+    tab[chosen] = 1;
+
+}
 
 function have_winner()
 {
@@ -50,15 +62,34 @@ function pressed(id)
 {
     if (tab[id-1] === -1 && running)
     {
-        element = document.createTextNode(players[actual_player]);
+        element = document.createTextNode("O");
         document.getElementById(id).appendChild(element);
-        tab[id-1] = actual_player;
+        tab[id-1] = 0;
         
 
         if(have_winner())
         {
             running = false;
-            document.getElementById("winner").innerHTML = "Winner: " + players[actual_player];
+            document.getElementById("winner").innerHTML = "Winner: You";
+            return;
+        }
+        else if (tie())
+        {
+            running = false;
+            document.getElementById("winner").innerHTML = "Tie";
+            return;
+        }
+        else
+        {
+            document.getElementById("winner").innerHTML = "Move: Bot";
+        }
+
+        setTimeout(() => {  bot_move(); }, 2000);
+
+        if(have_winner())
+        {
+            running = false;
+            document.getElementById("winner").innerHTML = "Winner: Bot";
         }
         else if (tie())
         {
@@ -67,11 +98,8 @@ function pressed(id)
         }
         else
         {
-            document.getElementById("winner").innerHTML = "Move: " + players[actual_player];
+            document.getElementById("winner").innerHTML = "Move: You";
         }
-
-        actual_player = (actual_player + 1) % 2;
-        console.log(tab);
 
     }
 }
