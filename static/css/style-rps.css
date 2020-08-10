@@ -2,25 +2,26 @@
 {
     width: 100%;
     height: 100%;
-    padding: 3%;
+    padding: 2%;
     background: rgb(51,17,246);
     background: linear-gradient(180deg, rgba(51,17,246,1) 0%, rgba(63,200,108,1) 100%);
 }
 
 .title-container
 {
-    width: 70%;
-    height: 5%;
+    width: 50%;
+    height: 10%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     background: rgb(255,0,0);
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,248,0,1) 100%);
     border-radius: 25px;
     text-align: center;
     color: white;
-    font-size: 64;
+    font-size: 50;
     font-weight: 900;
+    
 
 }
 
@@ -92,30 +93,34 @@
     display: flex;
     width:100%;
     justify-content: space-between;
+    margin-bottom: 5%;
 }
 
 .nav-button-left, .nav-button-right
 {
-    height: 5%;
+    display: block;
+    width: 14%;
+    height: 1%;
     background: rgb(0,245,255);
     background: linear-gradient(40deg, rgba(0,245,255,1) 44%, rgba(184,0,255,1) 100%);
     color:white;
     border-radius: 15px;
     font-weight: 900;
-    font-size: 32;
+    font-size: 20;
     padding: 1%;
     border: none;
+    text-align: center;
 
 }
 
 .nav-button-left
 {
-    text-align: left;
+    text-align: center;
 }
 
 .nav-button-right
 {
-    text-align: right;
+    text-align: center;
 }
 
 .nav-button-left:hover, .nav-button-right:hover

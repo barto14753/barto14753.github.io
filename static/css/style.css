@@ -6,7 +6,7 @@
 
 .full-container
 {
-    padding: 25px;
+    padding: 2%;
     width: 100%;
     height: 100%;
     background: rgb(2,0,36);
@@ -42,10 +42,10 @@
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(49,233,64,0.9612219887955182) 0%, rgba(0,212,255,1) 100%); 
     color: white;
-    font-size: 5em;
+    font-size: 50;
     font-weight: 900;
     text-align: center;
-    padding: 10px;
+    padding-top: 30px;
 }
 
 .square:hover
@@ -85,9 +85,9 @@
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,21,0.9612219887955182) 0%, rgba(0,212,255,1) 100%);
     margin-left: auto;
     margin-right: auto;
-    padding-top: 10px;
     text-align: center;
-    margin-top: 3%;
+    padding: 0.45%;
+    margin-top: 1%;
 
 }
 
@@ -143,12 +143,12 @@
 
 .nav-button-left
 {
-    text-align: left;
+    text-align: center;
 }
 
 .nav-button-right
 {
-    text-align: right;
+    text-align: center;
 }
 
 .nav-button-left:hover, .nav-button-right:hover
