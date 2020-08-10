@@ -58,3 +58,8 @@ function game(humanChoice)
     showResult(humanChoice, to_print, botChoice);
 
 }
+
+function to_tictactoe()
+{
+    window.location.href = "https://http://barto14753.github.io";
+}

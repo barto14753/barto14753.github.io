@@ -95,3 +95,7 @@ function restart()
 
 }
 
+function to_rps()
+{
+    window.location.href = "https://cssgradient.io";
+}
