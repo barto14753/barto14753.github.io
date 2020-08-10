@@ -4,6 +4,14 @@ let actual_player = 0;
 let running = true;
 
 
+function show_winner(id1, id2, id3)
+{
+    console.log(id1+1, id2+1, id3+1);
+    document.getElementById(id1+1).style.color = "red";
+    document.getElementById(id2+1).style.color = "red";
+    document.getElementById(id3+1).style.color = "red";
+}
+
 function bot_move()
 {
     let chosen = Math.floor(Math.random()*9);
@@ -20,24 +28,27 @@ function bot_move()
 
 function have_winner()
 {
-
     for(let i=0; i<3; i++)
     {
         if (tab[i] != -1 && tab[i] == tab[i+3] && tab[i+3] == tab[i+6])
         {
+            show_winner(i, i+3, i+6);
             return true;
         }
         else if (tab[3*i] != -1 && tab[3*i] == tab[3*i + 1] && tab[3*i + 1] == tab[3*i + 2])
         {
+            show_winner(3*i, 3*i+1, 3*i+2);
             return true;
         }
     }
     if (tab[0] != -1 && tab[0] == tab[4] && tab[4] == tab[8])
     {
+        show_winner(0, 4, 8);
         return true;
     }
     else if (tab[2] != -1 && tab[2] == tab[4] && tab[4] == tab[6])
     {
+        show_winner(2, 4, 6);
         return true;
     }
 
@@ -52,7 +63,6 @@ function tie()
     {
         if (tab[i] == -1)
         {
-            console.log("HERE: " + tab[i] + " " + i);
             return false;
         }
     }
@@ -61,6 +71,7 @@ function tie()
 
 function pressed(id)
 {
+    console.log("Running", running);
     if (tab[id-1] === -1 && running)
     {
         element = document.createTextNode("O");
@@ -106,9 +117,10 @@ function pressed(id)
     }
 }
 
-function delete_square(id)
+function reset_square(id)
 {
     document.getElementById(id).innerHTML = "";
+    document.getElementById(id).style.color = "white";
 }
 
 function restart()
@@ -118,10 +130,9 @@ function restart()
     for (let i=0; i<9; i++)
     {
         tab[i] = -1;
-        delete_square(i+1);
+        reset_square(i+1);
     }
     document.getElementById("winner").innerHTML = "Move: O";
-    reset_color();
 
 }
 
