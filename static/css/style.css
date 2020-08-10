@@ -115,3 +115,40 @@
     -moz-box-shadow: 0px 0px 38px 17px rgba(240,17,240,1);
     box-shadow: 0px 0px 38px 17px rgba(240,17,240,1);   
 }
+
+
+.nav-box
+{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.nav-button-left, .nav-button-right
+{
+    height: 5%;
+    background: rgb(0,245,255);
+    background: linear-gradient(40deg, rgba(0,245,255,1) 44%, rgba(184,0,255,1) 100%);
+    color:white;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 32;
+    padding: 1%;
+
+}
+
+.nav-button-left
+{
+    text-align: left;
+}
+
+.nav-button-right
+{
+    text-align: right;
+}
+
+.nav-button-left:hover, .nav-button-right:hover
+{
+    background: rgb(0,245,255);
+    background: linear-gradient(40deg, rgba(0,245,255,1) 0%, rgba(184,0,255,1) 50%);
+}
