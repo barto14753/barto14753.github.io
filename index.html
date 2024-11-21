@@ -1,451 +1,331 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-<head><script src="static/js/color-modes.js"></script>
+	<head>
+		<script src="static/js/color-modes.js"></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta
+			name="author"
+			content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+		/>
+		<meta name="generator" content="Hugo 0.115.4" />
+		<title>barto14753</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.115.4">
-    <title>barto14753</title>
+		<link rel="icon" href="static/images/favicon.ico" />
+		<link
+			rel="canonical"
+			href="https://getbootstrap.com/docs/5.3/examples/starter-template/"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="static/css/styles.css" />
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+			<symbol id="check2" viewBox="0 0 16 16">
+				<path
+					d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+				/>
+			</symbol>
+			<symbol id="circle-half" viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+			</symbol>
+			<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+				<path
+					d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+				/>
+				<path
+					d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+				/>
+			</symbol>
+			<symbol id="sun-fill" viewBox="0 0 16 16">
+				<path
+					d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+				/>
+			</symbol>
+			<symbol id="github" viewBox="0 0 16 16">
+				<path
+					d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+				/>
+			</symbol>
+			<symbol id="linkedin" viewBox="0 0 16 16">
+				<path
+					d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"
+				/>
+			</symbol>
+			<symbol id="person" viewBox="0 0 16 16">
+				<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+				<path
+					d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"
+				/>
+			</symbol>
+		</svg>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
+		<div
+			class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+		>
+			<button
+				class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+				id="bd-theme"
+				type="button"
+				aria-expanded="false"
+				data-bs-toggle="dropdown"
+				aria-label="Toggle theme (auto)"
+			>
+				<svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+					<use href="#circle-half"></use>
+				</svg>
+				<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+			</button>
+			<ul
+				class="dropdown-menu dropdown-menu-end shadow"
+				aria-labelledby="bd-theme-text"
+			>
+				<li>
+					<button
+						type="button"
+						class="dropdown-item d-flex align-items-center"
+						data-bs-theme-value="light"
+						aria-pressed="false"
+					>
+						<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+							<use href="#sun-fill"></use>
+						</svg>
+						Light
+						<svg class="bi ms-auto d-none" width="1em" height="1em">
+							<use href="#check2"></use>
+						</svg>
+					</button>
+				</li>
+				<li>
+					<button
+						type="button"
+						class="dropdown-item d-flex align-items-center"
+						data-bs-theme-value="dark"
+						aria-pressed="false"
+					>
+						<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+							<use href="#moon-stars-fill"></use>
+						</svg>
+						Dark
+						<svg class="bi ms-auto d-none" width="1em" height="1em">
+							<use href="#check2"></use>
+						</svg>
+					</button>
+				</li>
+				<li>
+					<button
+						type="button"
+						class="dropdown-item d-flex align-items-center active"
+						data-bs-theme-value="auto"
+						aria-pressed="true"
+					>
+						<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+							<use href="#circle-half"></use>
+						</svg>
+						Auto
+						<svg class="bi ms-auto d-none" width="1em" height="1em">
+							<use href="#check2"></use>
+						</svg>
+					</button>
+				</li>
+			</ul>
+		</div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+		<div class="col-lg-8 mx-auto p-4 py-md-5">
+			<header class="profile-header">
+				<img
+					src="static/images/photo.jpg"
+					alt="Profile Photo"
+					class="profile-photo"
+				/>
+				<div class="profile-info">
+					<h1 class="profile-name">Bartosz Włodarski</h1>
+					<p class="profile-title">Software Engineer</p>
+					<div class="profile-stats">
+						<div class="stat-item">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-code-square"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+								/>
+								<path
+									d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"
+								/>
+							</svg>
+							<span>13 Projects</span>
+						</div>
+						<div class="stat-item">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-code-slash"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"
+								/>
+							</svg>
+							<span>Java • Python • JavaScript</span>
+						</div>
+					</div>
+					<div class="social-links">
+						<a
+							href="https://github.com/barto14753?tab=repositories"
+							target="_blank"
+							title="GitHub"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="currentColor"
+								class="bi bi-github"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/bartosz-w%C5%82odarski-a549b9208/"
+							target="_blank"
+							title="LinkedIn"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="currentColor"
+								class="bi bi-linkedin"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</header>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+			<p class="fs-5 col-md-10">
+				I enjoy solving problems and crafting application using languages like
+				<strong>Java</strong>, <strong>Python</strong> and
+				<strong>JavaScript</strong>. <br />
+				Below you can find links to some of my projects.
+			</p>
 
-    <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-        }
+			<div class="mb-5">
+				<a
+					href="https://github.com/barto14753?tab=repositories"
+					class="btn btn-primary btn-lg px-4"
+				>
+					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+						<use href="#github"></use>
+					</svg>
+					Check all projects
+				</a>
+				<a
+					href="https://www.linkedin.com/in/bartosz-w%C5%82odarski-a549b9208/"
+					class="btn btn-danger btn-lg px-4"
+				>
+					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+						<use href="#linkedin"></use>
+					</svg>
+					LinkedIn
+				</a>
+			</div>
 
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
+			<section class="timeline-section container my-5">
+				<div class="timeline">
+					<div class="timeline-item" data-category="work">
+						<div class="timeline-badge bg-success">
+							<i class="bi bi-briefcase-fill"></i>
+						</div>
+						<div class="timeline-content">
+							<h6 class="timeline-date">July 2022</h6>
+							<h5>Sabre</h5>
+							<p>Associate Intern</p>
+						</div>
+					</div>
 
-        .b-example-divider {
-          width: 100%;
-          height: 3rem;
-          background-color: rgba(0, 0, 0, .1);
-          border: solid rgba(0, 0, 0, .15);
-          border-width: 1px 0;
-          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
+					<div class="timeline-item" data-category="work">
+						<div class="timeline-badge bg-success">
+							<i class="bi bi-briefcase-fill"></i>
+						</div>
+						<div class="timeline-content">
+							<h6 class="timeline-date">October 2022</h6>
+							<h5>Sabre</h5>
+							<p>Software Engineer I</p>
+						</div>
+					</div>
 
-        .b-example-vr {
-          flex-shrink: 0;
-          width: 1.5rem;
-          height: 100vh;
-        }
+					<div class="timeline-item" data-category="education">
+						<div class="timeline-badge bg-primary">
+							<i class="bi bi-mortarboard-fill"></i>
+						</div>
+						<div class="timeline-content">
+							<h6 class="timeline-date">October 2019 - February 2023</h6>
+							<h5>AGH University of Science and Technology</h5>
+							<p>Computer Science</p>
+							<p>Bachelor of Engineering</p>
+						</div>
+					</div>
 
-        .bi {
-          vertical-align: -.125em;
-          fill: currentColor;
-        }
+					<div class="timeline-item" data-category="work">
+						<div class="timeline-badge bg-success">
+							<i class="bi bi-briefcase-fill"></i>
+						</div>
+						<div class="timeline-content">
+							<h6 class="timeline-date">July 2023</h6>
+							<h5>Sabre</h5>
+							<p>Software Engineer III</p>
+						</div>
+					</div>
 
-        .nav-scroller {
-          position: relative;
-          z-index: 2;
-          height: 2.75rem;
-          overflow-y: hidden;
-        }
+					<div class="timeline-item" data-category="education">
+						<div class="timeline-badge bg-primary">
+							<i class="bi bi-mortarboard-fill"></i>
+						</div>
+						<div class="timeline-content">
+							<h6 class="timeline-date">October 2023 - 2025</h6>
+							<h5>Cracow University of Technology</h5>
+							<p>Computer Science</p>
+							<p>Masters of Engineering</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr class="col-3 col-md-2 mb-5" />
+			<div class="row g-5">
+				<div class="col-md-6">
+					<h2 class="text-body-emphasis">Projects</h2>
+					<p>Here are some pinned projects</p>
+				</div>
 
-        .nav-scroller .nav {
-          display: flex;
-          flex-wrap: nowrap;
-          padding-bottom: 1rem;
-          margin-top: -1px;
-          overflow-x: auto;
-          text-align: center;
-          white-space: nowrap;
-          -webkit-overflow-scrolling: touch;
-        }
-
-        .btn-bd-primary {
-          --bd-violet-bg: #712cf9;
-          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-          --bs-btn-font-weight: 600;
-          --bs-btn-color: var(--bs-white);
-          --bs-btn-bg: var(--bd-violet-bg);
-          --bs-btn-border-color: var(--bd-violet-bg);
-          --bs-btn-hover-color: var(--bs-white);
-          --bs-btn-hover-bg: #6528e0;
-          --bs-btn-hover-border-color: #6528e0;
-          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-          --bs-btn-active-color: var(--bs-btn-hover-color);
-          --bs-btn-active-bg: #5a23c8;
-          --bs-btn-active-border-color: #5a23c8;
-        }
-        .bd-mode-toggle {
-          z-index: 1500;
-        }
-        .card {
-            transition: background-color 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-            margin-bottom: 20px;
-            min-height: 175px;
-          }
-      
-          .card:hover {
-            background-color: #0d6efd
-          }
-      
-          .card:active {
-            background-color: #0d6efd
-          }
-
-          .tag {
-            display: inline-block;
-            margin: 2px;
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: #fff; 
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 14px;
-          }
-
-        .tag-java {
-            background-color: #007396;
-        }
-        
-        .tag-javascript {
-            background-color: rgba(255, 221, 0, 0.773)
-        }
-        
-        .tag-python {
-            background-color: #306998;
-        }
-        
-        .tag-pytorch {
-            background-color: #EE4C2C;
-        }
-        
-        .tag-go {
-            background-color: #00ADD8;
-        }
-        
-        .tag-rust {
-            background-color: #DEA584;
-        }
-        
-        .tag-react {
-            background-color: #61DAFB;
-        }
-
-        .tag-django {
-            background-color: #61DAFB;
-        }
-
-
-        .tag-django {
-            background-color: #092E20;
-        }
-        
-        .tag-scala {
-            background-color: #DC322F;
-        }
-        
-        .tag-swing {
-            background-color: #6DB33F;
-        }
-        
-        .tag-nodejs {
-            background-color: #43853D;
-        }
-        
-        .tag-express {
-            background-color: #000000;
-            color: white;
-        }
-        
-    </style>
-
-
-</head>
-<body>
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-    </symbol>
-    <symbol id="github" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-    </symbol>
-    <symbol id="linkedin" viewBox="0 0 16 16">
-        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
-    </symbol>
-    <symbol id="person" viewBox="0 0 16 16">
-        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
-    </symbol>
-</svg>
-
-<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                Light
-                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-            </button>
-        </li>
-        <li>
-            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                Dark
-                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-            </button>
-        </li>
-        <li>
-            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                Auto
-                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-            </button>
-        </li>
-    </ul>
-</div>
-
-
-<div class="col-lg-8 mx-auto p-4 py-md-5">
-    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-        <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1.8em" height="1.8em"><use href="#person"></use></svg>
-            <span class="fs-4">Bartosz Włodarski</span>
-        </a>
-    </header>
-
-    <main>
-        <h1 class="text-body-emphasis">Welcome to my personal page!</h1>
-        <p class="fs-5 col-md-10">
-            I enjoy solving problems and crafting application using languages like <strong>Java</strong>, <strong>Python</strong> and <strong>JavaScript</strong>. <br>
-            Below you can find links to some of my projects.
-        </p>
-
-        <div class="mb-5">
-            <a href="https://github.com/barto14753?tab=repositories" class="btn btn-primary btn-lg px-4">
-                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#github"></use></svg>
-                Check all projects
-            </a>
-            <a href="https://www.linkedin.com/in/bartosz-w%C5%82odarski-a549b9208/" class="btn btn-danger btn-lg px-4">
-                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#linkedin"></use></svg>
-                LinkedIn
-            </a>
-        </div>
-
-        <hr class="col-3 col-md-2 mb-5">
-
-        <div class="row g-5">
-            <div class="col-md-6">
-                <h2 class="text-body-emphasis">Projects</h2>
-                <p>Here are some pinned projects</p>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                      <a href="https://github.com/barto14753/jwt-decoder" class="card" target="_blank">
-                        <div class="card-body">
-                          <h5 class="card-title">jwt-decoder</h5>
-                          <p class="card-text">JWT token decoder/encoder UI</p>
-                        </div>
-                        <div class="card-footer">
-                          <span class="tag tag-javascript">JavaScript</span>
-                          <span class="tag tag-react">React</span>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://github.com/barto14753/blockchain-demo" class="card" target="_blank">
-                          <div class="card-body">
-                            <h5 class="card-title">blockchain-demo</h5>
-                            <p class="card-text">Demo app presenting simplified blockchain flow</p>
-                          </div>
-                          <div class="card-footer">
-                            <span class="tag tag-javascript">JavaScript</span>
-                            <span class="tag tag-react">React</span>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div class="col-md-4">
-                        <a href="https://github.com/barto14753/flashcards" class="card" target="_blank">
-                          <div class="card-body">
-                            <h5 class="card-title">flashcards</h5>
-                            <p class="card-text">Learning web app</p>
-                          </div>
-                          <div class="card-footer">
-                            <span class="tag tag-javascript">JavaScript</span>
-                            <span class="tag tag-react">React</span>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div class="col-md-4">
-                        <a href="https://github.com/barto14753/go-short" class="card" target="_blank">
-                          <div class="card-body">
-                            <h5 class="card-title">go-short</h5>
-                            <p class="card-text">Go URL shortener</p>
-                          </div>
-                          <div class="card-footer">
-                            <span class="tag tag-go">Go</span>
-                            <span class="tag tag-javascript">Javascript</span>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div class="col-md-4">
-                        <a href="https://github.com/barto14753/mnist" class="card" target="_blank">
-                          <div class="card-body">
-                            <h5 class="card-title">mnist</h5>
-                            <p class="card-text">Small app recognizing digit you wrote</p>
-                          </div>
-                          <div class="card-footer">
-                            <span class="tag tag-python">Python</span>
-                            <span class="tag tag-pytorch">Pytorch</span>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div class="col-md-4">
-                        <a href="https://github.com/barto14753/rusty-cache" class="card" target="_blank">
-                          <div class="card-body">
-                            <h5 class="card-title">rusty-cache</h5>
-                            <p class="card-text">Simple in-memory key-value database</p>
-                          </div>
-                          <div class="card-footer">
-                            <span class="tag tag-rust">Rust</span>
-                            <span class="tag tag-newman">Newman</span>
-                          </div>
-                        </a>
-                      </div>
-
-                  <div class="col-md-4">
-                    <a href="https://github.com/barto14753/SocialNetwork" class="card" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title">Social Network</h5>
-                        <p class="card-text">Social network web application written in Django</p>
-                      </div>
-                      <div class="card-footer">
-                        <span class="tag tag-python">Python</span>
-                        <span class="tag tag-django">Django</span>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="col-md-4">
-                    <a href="https://github.com/barto14753/Chess-js" class="card" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title">Chess</h5>
-                        <p class="card-text">Chess online web application</p>
-                      </div>
-                      <div class="card-footer">
-                        <span class="tag tag-node">Node.js</span>
-                        <span class="tag tag-express">Express</span>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="col-md-4">
-                    <a href="https://github.com/barto14753/PathFinder" class="card" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title">PathFinder</h5>
-                        <p class="card-text">Visualization of pathfinding algorithm</p>
-                      </div>
-                      <div class="card-footer">
-                        <span class="tag tag-python">Python</span>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="col-md-4">
-                    <a href="https://github.com/barto14753/AlgoVis" class="card" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title">AlgoVis</h5>
-                        <p class="card-text">Visualisation of sorting algorithms</p>
-                      </div>
-                      <div class="card-footer">
-                        <span class="tag tag-javascript">JavaScript</span>
-                        <span class="tag tag-react">React</span>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="col-md-4">
-                    <a href="https://github.com/barto14753/Scalogic" class="card" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title">Scalogic</h5>
-                        <p class="card-text">Logical expression evaluator</p>
-                      </div>
-                      <div class="card-footer">
-                        <span class="tag tag-scala">Scala</span>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="col-md-4">
-                    <a href="https://github.com/barto14753/Simulation" class="card" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title">Simulation</h5>
-                        <p class="card-text">The game of life</p>
-                      </div>
-                      <div class="card-footer">
-                        <span class="tag tag-java">Java</span>
-                        <span class="tag tag-swing">Swing</span>
-                    </div>
-                    </a>
-                  </div>
-
-                  <div class="col-md-4">
-                    <a href="https://github.com/barto14753/FuzzySimulation" class="card" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title">FuzzySimulation</h5>
-                        <p class="card-text">Fuzzy logic simulation</p>
-                      </div>
-                      <div class="card-footer">
-                        <span class="tag tag-java">Java</span>
-                        <span class="tag tag-swing">Swing</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-    </main>
-    <footer class="pt-5 my-5 text-body-secondary border-top">
-        Created by the Bootstrap team &middot; &copy; 2023
-    </footer>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+				<div class="container-fluid">
+					<div class="row"></div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="static/js/projects.js"></script>
+	</body>
 </html>
